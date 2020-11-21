@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta</title>
+    <link rel="stylesheet" href="/views/consulta/consulta.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/26caec3402.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navbar-planet">
+        <button onclick="paginaInicial()" style="color: #ffffff; margin-left: 5px;" class="btn">Pagina inicial</button>
+        <i onclick="logout()" style="color: #ffffff; margin-right: 15px; cursor: pointer;"
+            class="fa fa-sign-out-alt fa-3x"></i>
+    </div>
+    <div class="container-historico">
+        <div class="suporte-tabela-historico">
+            <div style="height: 100%; width: 100%;">
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th class="text-center" scope="col">Descrição</th>
+                            <th class="text-center" scope="col">Valor</th>
+                            <th class="text-center" scope="col">Destino</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela-historico">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/views/consulta/consulta.js"></script>
+
+</html>

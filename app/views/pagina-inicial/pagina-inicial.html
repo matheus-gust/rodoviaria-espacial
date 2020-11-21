@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina Inicial</title>
+    <link rel="stylesheet" href="/views/pagina-inicial/pagina-inicial.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/26caec3402.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="navbar" class="navbar-planet">
+        <i onclick="logout()" style="color: #ffffff; margin-right: 15px; cursor: pointer;" class="fa fa-sign-out-alt fa-3x"></i>
+    </div>
+    <div id="sidebar" class="sidebar">
+    </div>
+    <div id="menu-navegar" class="menu-navegar">
+        <div class="container-fluid">
+            <div style="margin-top: 60px;" class="row">
+                <div class="col-12 p-0 text-center">
+                    <i onclick="abrirPaginaUsuario()" style="cursor:pointer" class="fa fa-user-circle fa-3x"></i>
+                    <i onclick="abrirPaginaHistorico()" style="cursor:pointer; margin-top: 25px;" class="fa fa-list-alt fa-3x"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="conteudo">
+        <div class="container-fluid">
+            <div id="grid" class="row justify-content-around">
+                <div class="col-12 col-md-4">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--dialog confirmar compra destino-->
+    <div id="plano-compra" class="naovisivel">
+        <div class="dialog-adicionar">
+            <div class="header-dialog">
+                <h5 id="tituloConfirmarCompra"></h5>
+            </div>
+            <form class="needs-validation" novalidate>
+                <div class="dialog-content p-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6">
+                                <span id="compradorLabel">Comprador: </span> <br>
+                                <span id="saldo">Saldo: </span>
+                            </div>
+                            <div class="col-6">
+                                <span id="vagas">Vagas: </span> <br>
+                                <span id="valor">Valor: </span>
+                            </div>
+                        </div>
+                        <span hidden="true" id="mensagemSaldo" style="color: rgb(206, 1, 1);">Saldo Insuficiente</span> <br>
+                        <span hidden="true" id="mensagemVagas" style="color: rgb(206, 1, 1);">Vagas Esgotadas</span>
+                    </div>
+                </div>
+            </form>
+            <div class="dialog-footer p-2">
+                <button id="btnConfirmarCompra" onclick="confirmarIngresso(compraSelecionada.id)" class="btn btn-success mr-2">Confirmar</button>
+                <button onclick="fecharDialog()" class="btn btn-danger">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toasty" class="naovisivel">
+        <span class="text-center" id="mensagem-toasty"></span>
+    </div>
+</body>
+<script src="/views/pagina-inicial/pagina-inicial.js"></script>
+
+</html>

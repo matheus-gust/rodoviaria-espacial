@@ -1,0 +1,62 @@
+body {
+    background-color:rgb(44, 44, 44) !important;
+}
+
+.navbar-planet {
+    justify-content: space-between;
+    display: flex;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #343a40;;
+}
+
+.container-usuario {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.suporte-formulario-usuario {
+    border-radius: 10px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(79, 79, 79);
+    width: 800px;
+    height: 500px;
+    align-self: center;
+    justify-self: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.toasty {
+    z-index: 9999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    height: 120px;
+    width: 300px;
+    background-color: #ffffffc1;
+    border-radius: 10px;
+}
+
+.naovisivel {
+    display: none;
+}

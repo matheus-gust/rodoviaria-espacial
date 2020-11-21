@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link type="text/css" rel="stylesheet" href="/views/login/login.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/26caec3402.js" crossorigin="anonymous"></script>
+</head>
+
+<body">
+    <div class="login-site">
+        <div style="margin-top: 10px; text-align: center;">
+            <img style="align-self: center; user-select: none;" class="mb-4" width="120" height="100" src="/assets/planetinha.png">
+        </div>
+        <div class="suporte-login">
+            <h2>PlanetJS</h2>
+            <h5>Entrar</h5>
+            <form class="needs-validation" novalidate>
+                <label for="idemail">Email</label>
+                <input required name="email" id="idemail" class="form-control input-login mb-2" type="email">
+                <div class="invalid-feedback">
+                    Campo email inválido
+                </div>
+                <label for="idsenha">Senha</label>
+                <input required name="senha" id="idsenha" type="password" class="form-control input-login">
+                <div class="invalid-feedback">
+                    Campo obrigatório
+                </div>
+                <p id="mensagemErro" style="display: none"></p>
+                <button id="enviar" onclick="login()" type="button" class="btn mt-3"
+                    style="color:#ffffff; background-color: #03a3108a; width: 100%;"> <i style="display: none;" id='spinner' class="fas fa-spinner fa-spin"></i><p style="margin: 0;" id="entrar">Entrar</p></button>
+            </form>
+            <p class="mt-2" style="align-self: center; margin: 0;">ou</p>
+            <p style="align-self: center;">Cadastre-se</p>
+            <a href="/register" type="submit" class="btn 2"
+                    style="color:#ffffff; background-color: #0000008a; width: 100%;">Efetuar cadastro</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/views/login/login.js"></script>
+</html>
