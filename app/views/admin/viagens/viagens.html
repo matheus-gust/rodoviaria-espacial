@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrar</title>
+    <link rel="stylesheet" href="/views/admin/admin.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/26caec3402.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navbar-planet">
+        <button onclick="paginaInicial()" style="color: #ffffff; margin-left: 5px;" class="btn">Pagina inicial</button>
+        <i onclick="logout()" style="color: #ffffff; margin-right: 15px; cursor: pointer;"
+          class="fa fa-sign-out-alt fa-3x"></i>
+      </div>
+    <div class="sidebar">
+        <div onclick="abrirDestinos()" class="botao-navegar">
+            Destinos
+        </div>
+        <div onclick="abrirViagem()" class="botao-navegar">
+            Viagens
+        </div>
+    </div>
+
+
+    <div id="suporte-tabela-viagem" class="suporte-tabela">
+        <p style="color: #ffffff; font-size: 30pt; margin-left: 8px;">Viagens</p>
+        <button onclick="abrirDialogAdicionarViagem()" class="btn btn-success m-2"><i class="fa fa-plus"></i>
+            Adicionar</button>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th class="text-center" scope="col">Descrição</th>
+                    <th class="text-center" scope="col">Valor (R$)</th>
+                    <th class="text-center" scope="col">Vagas</th>
+                    <th class="text-center" scope="col">Destino</th>
+                    <th class="text-center" scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela-viagem">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!--dialog adicionar viagens-->
+    <div id="plano-adicionar-viagem" class="naovisivel">
+        <div class="dialog-adicionar">
+            <div class="header-dialog">
+                <h5>Adicionar viagem</h5>
+            </div>
+            <form id="form-adicionar-viagem" class="needs-validation" novalidate>
+                <div class="dialog-content p-2">
+                    <label>Destinos</label>
+                    <select id="destinoViagem" class="form-control">
+                    </select>
+                    <label>Descrição</label>
+                    <input required id="descricaoViagem" name="descricaoViagem" class="form-control">
+                    <label>Valor</label>
+                    <input required id="valorViagem" name="valorViagem" step="0.01" class="form-control" type="number">
+                    <label>Vagas</label>
+                    <input required id="vagasViagem" name="nome" class="form-control" type="number">
+                </div>
+            </form>
+            <div class="dialog-footer p-2">
+                <button onclick="adicionarViagem()" class="btn btn-success mr-2">Confirmar</button>
+                <button onclick="fecharDialog()" class="btn btn-danger">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- dialog excluir destino-->
+    <div id="plano-remover" class="naovisivel">
+        <div class="dialog">
+            <div class="header-dialog">
+                <h5>Exclusão</h5>
+            </div>
+            <div class="dialog-content p-2">
+                Deseja mesmo excluir a viagem?
+            </div>
+            <div class="dialog-footer p-2">
+                <button onclick="removerViagens()" class="btn btn-success mr-2">Confirmar</button>
+                <button onclick="fecharDialog()" class="btn btn-danger">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toasty" class="naovisivel">
+        <span class="text-center" id="mensagem-toasty"></span>
+    </div>
+</body>
+<script src="/views/admin/viagens/viagens.js"></script>
+
+</html>

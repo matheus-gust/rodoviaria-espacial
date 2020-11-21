@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Administrar</title>
+  <link rel="stylesheet" href="/views/admin/admin.css" type="text/css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <script src="https://kit.fontawesome.com/26caec3402.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="navbar-planet">
+    <button onclick="paginaInicial()" style="color: #ffffff; margin-left: 5px;" class="btn">Pagina inicial</button>
+    <i onclick="logout()" style="color: #ffffff; margin-right: 15px; cursor: pointer;"
+      class="fa fa-sign-out-alt fa-3x"></i>
+  </div>
+  <div class="sidebar">
+    <div onclick="abrirDestinos()" class="botao-navegar">
+      Destinos
+    </div>
+    <div onclick="abrirViagem()" class="botao-navegar">
+      Viagens
+    </div>
+  </div>
+  <div id="suporte-tabela-destino" class="suporte-tabela">
+    <p style="color: #ffffff; font-size: 30pt; margin-left: 8px;">Destinos</p>
+    <button onclick="abrirDialogAdicionar()" class="btn btn-success m-2"><i class="fa fa-plus"></i> Adicionar</button>
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th class="text-center" scope="col">Nome</th>
+          <th class="text-center" scope="col">Descrição</th>
+          <th class="text-center" scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="corpo-tabela-destino">
+      </tbody>
+    </table>
+  </div>
+
+  <!-- dialog excluir destino-->
+  <div id="plano-remover" class="naovisivel">
+    <div class="dialog">
+      <div class="header-dialog">
+        <h5>Exclusão</h5>
+      </div>
+      <div class="dialog-content p-2">
+        Deseja mesmo excluir o destino?
+      </div>
+      <div class="dialog-footer p-2">
+        <button onclick="removerDestino()" class="btn btn-success mr-2">Confirmar</button>
+        <button onclick="fecharDialog()" class="btn btn-danger">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!--dialog adicionar destino-->
+  <div id="plano-adicionar" class="naovisivel">
+    <div class="dialog-adicionar">
+      <div class="header-dialog">
+        <h5>Adicionar Destino</h5>
+      </div>
+      <form class="needs-validation" novalidate>
+        <div style="text-align: center;">
+          <label class="label-arquivo" for="arquivo"><img id="imgperfil"
+              style="height: 130px; width: 130px; border-radius: 50%; cursor: pointer;"
+              src="/assets/baixados.png"></label>
+          <input onchange="definirImagem()" name="arquivo" id="arquivo" type="file">
+        </div>
+        <div class="dialog-content p-2">
+          <label>Nome</label>
+          <input required id="nome" name="nome" class="form-control">
+          <label>Descrição</label>
+          <input required id="descricao" name="descricao" class="form-control">
+        </div>
+      </form>
+      <div class="dialog-footer p-2">
+        <button onclick="adicionarDestino()" class="btn btn-success mr-2">Confirmar</button>
+        <button onclick="fecharDialog()" class="btn btn-danger">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!--dialog editar destino-->
+
+  <div id="plano-editar" class="naovisivel">
+    <div class="dialog-adicionar">
+      <div class="header-dialog">
+        <h5>Editar Destino</h5>
+      </div>
+      <form id="form-adicionar-destino" class="needs-validation" novalidate>
+        <div style="text-align: center;">
+          <label class="label-arquivo" for="editar"><img id="labeleditar"
+              style="height: 130px; width: 130px; border-radius: 50%; cursor: pointer;"
+              src="/assets/baixados.png"></label>
+          <input onchange="definirImagemEditar()" name="editar" id="editar" type="file">
+        </div>
+        <div class="dialog-content p-2">
+          <label>Nome</label>
+          <input required id="nomeEditar" name="nome" class="form-control">
+          <label>Descrição</label>
+          <input required id="descricaoEditar" name="descricao" class="form-control">
+        </div>
+      </form>
+      <div class="dialog-footer p-2">
+        <button onclick="salvarAlteracoesDestino()" class="btn btn-success mr-2">Confirmar</button>
+        <button onclick="fecharDialog()" class="btn btn-danger">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toasty" class="naovisivel">
+    <span class="text-center" id="mensagem-toasty"></span>
+  </div>
+
+</body>
+<script src="/views/admin/admin.js"></script>
+
+</html>

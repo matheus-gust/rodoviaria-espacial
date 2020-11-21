@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/views/usuario/usuario.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/26caec3402.js" crossorigin="anonymous"></script>
+    <title>Usuarios</title>
+</head>
+
+<body>
+    <div class="navbar-planet">
+        <button onclick="paginaInicial()" style="color: #ffffff; margin-left: 5px;" class="btn">Pagina inicial</button>
+        <i onclick="logout()" style="color: #ffffff; margin-right: 15px; cursor: pointer;" class="fa fa-sign-out-alt fa-3x"></i>
+    </div>
+    <div class="container-usuario">
+        <div class="suporte-formulario-usuario">
+            <span style="font-size: 20px;">Editar usuario</span>
+            <form id="formUsuario" class="needs-validation mt-3">
+                <div class="container-fluid mb-4">
+                    <div>
+                        <label class="label-arquivo" for="arquivo"><img id="imgperfil" style="height: 130px; width: 130px; border-radius: 50%; cursor: pointer;" src="/assets/saturno.jpg"></label>
+                        <input onchange="definirImagem()" name="arquivo" id="arquivo" type="file">
+                    </div>
+                    <div class="form-row mt-3">
+                        <div class="col-8">
+                            <label for="nome">Nome</label>
+                            <input required name="nome" id="nome" class="form-control" type="text">
+                        </div>
+                        <div class="col-4">
+                            <label for="cpf">CPF</label>
+                            <input required name="cpf" id="cpf" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-row mt-2">
+                        <div class="col-12">
+                            <label for="email">Email</label>
+                            <input required name="email" id="email" class="form-control" type="email">
+                        </div>
+                    </div>
+                    <button type="button" onclick="salvarAlteracoesUsuario()" class="btn mt-5"
+                        style="color:#ffffff; background-color: #03a3108a; width: 100%;">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="toasty" class="naovisivel">
+        <span class="text-center" id="mensagemToasty"></span>
+    </div>
+</body>
+<script src="/views/usuario/usuario.js"></script>
+</html>

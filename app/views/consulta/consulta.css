@@ -1,0 +1,36 @@
+body {
+    background-color:rgb(44, 44, 44) !important;
+}
+
+.navbar-planet {
+    justify-content: space-between;
+    display: flex;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #343a40;;
+}
+
+.container-historico {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.suporte-tabela-historico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(79, 79, 79);
+    width: 90%;
+}

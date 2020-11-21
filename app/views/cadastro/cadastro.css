@@ -1,0 +1,39 @@
+.cadastro-site {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-content: center;
+    margin: 0;
+    background-color: transparent;
+}
+
+.suporte-cadastro {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 700px;
+    align-self: center;
+    justify-content: center;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+.input-cadastro {
+    border-color: #0000008a !important;
+}
+
+body {
+    margin: 0px;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    align-self: center; 
+    font-size: 30 !important; 
+    margin-top: 50;
+}

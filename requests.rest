@@ -1,0 +1,24 @@
+POST http://localhost:3000/admin/destinos
+Content-Type: application/json
+
+{
+    "nome": "Saturno",
+    "descricao": "Planeta gasoso a estadia é na lua Europa"
+}
+
+###
+
+POST http://localhost:3000/admin/viagens
+Content-Type: application/json
+
+{
+    "descricao": "Saturno",
+    "valor": 5.50,
+    "vagas": 2,
+    "destino": 5
+}
+
+###
+
+GET http://localhost:3000/consulta/listar
+Content-Type: application/json
